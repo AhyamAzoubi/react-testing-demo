@@ -1,6 +1,7 @@
-import Haustier from './components/Haustier.js';
-import './App.css';
-
+import "./App.css";
+import { Routes, Route, Link } from "react-router-dom";
+import Haustierliste from "./components/Haustierliste.js";
+import Carousel from "./components/Carousel.js";
 const haustierArray = [
   {
     name: "Aristoteles",
@@ -10,8 +11,8 @@ const haustierArray = [
     images: [
       "https://i.imgur.com/ZUbUAIN.jpeg",
       "https://i.imgur.com/y0KKYJE.jpeg",
-      "https://i.imgur.com/Bohfz1o.jpeg"
-    ]
+      "https://i.imgur.com/Bohfz1o.jpeg",
+    ],
   },
   {
     name: "Leo",
@@ -19,8 +20,8 @@ const haustierArray = [
     breed: "British",
     id: 2,
     images: [
-      "https://upload.wikimedia.org/wikipedia/commons/e/e1/British_blue_2009_%28cropped%29.jpg"
-    ]
+      "https://upload.wikimedia.org/wikipedia/commons/e/e1/British_blue_2009_%28cropped%29.jpg",
+    ],
   },
   {
     name: "Lady",
@@ -28,32 +29,25 @@ const haustierArray = [
     breed: "Dackel",
     id: 3,
     images: [
-      "https://upload.wikimedia.org/wikipedia/commons/0/03/Kurzhaardackel.jpg"
-    ]
+      "https://upload.wikimedia.org/wikipedia/commons/0/03/Kurzhaardackel.jpg",
+    ],
   },
   {
     name: "Tiramisu",
     animal: "Meerschweinchen",
     breed: "Rosette",
-    images: []
-  }
+    images: [],
+  },
 ];
 
 function App() {
   return (
     <div className="App">
       <h1>Lustige Tiere!</h1>
-      {haustierArray.map((haustier) => {
-        return (
-          <Haustier
-            name={haustier.name}
-            animal={haustier.animal}
-            breed={haustier.breed}
-            key={haustier.id}
-            images={haustier.images}
-          />
-        );
-      })}
+      <Routes>
+        <Route path="/" element={<Haustierliste haustierArray={haustierArray} /> } />
+        <Route path="/pictures/:id" element={<Carousel /> } />
+      </Routes>
     </div>
   );
 }

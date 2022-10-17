@@ -31,6 +31,12 @@ const haustierArray = [
       "https://upload.wikimedia.org/wikipedia/commons/0/03/Kurzhaardackel.jpg"
     ]
   },
+  {
+    name: "Tiramisu",
+    animal: "Meerschweinchen",
+    breed: "Rosette",
+    images: []
+  }
 ];
 
 function App() {
@@ -44,6 +50,7 @@ function App() {
             animal={haustier.animal}
             breed={haustier.breed}
             key={haustier.id}
+            images={haustier.images}
           />
         );
       })}

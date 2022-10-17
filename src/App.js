@@ -36,6 +36,7 @@ const haustierArray = [
     name: "Tiramisu",
     animal: "Meerschweinchen",
     breed: "Rosette",
+    id: 4,
     images: [],
   },
 ];

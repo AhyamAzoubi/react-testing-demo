@@ -47,7 +47,7 @@ function App() {
       <h1>Lustige Tiere!</h1>
       <Routes>
         <Route path="/" element={<Haustierliste haustierArray={haustierArray} /> } />
-        <Route path="/pictures/:id" element={<Carousel /> } />
+        <Route path="/pictures/:id" element={<Carousel haustierArray={haustierArray} /> } />
       </Routes>
     </div>
   );

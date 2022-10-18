@@ -1,5 +1,3 @@
-
-import { useState } from "react";
 import './Haustier.css';
 import { Link } from "react-router-dom";
 

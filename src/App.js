@@ -1,5 +1,5 @@
 import "./App.css";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Haustierliste from "./components/Haustierliste.js";
 import Carousel from "./components/Carousel.js";
 const haustierArray = [

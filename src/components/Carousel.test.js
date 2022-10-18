@@ -39,10 +39,10 @@ it("lets users click on thumbnails to make them the hero image", async () => {
       </MemoryRouter>
     );
 
-    const hero = await carousel.findByTestId("hero");
-    expect(hero.src).toContain(haustierArray[j].images[0]);
+    const images = haustierArray[j].images;
 
-    const images = haustierArray[j];
+    const hero = await carousel.findByTestId("hero");
+    expect(hero.src).toContain(images[0]);
 
     for (let i = 0; i < images.length; i++) {
       const image = images[i];

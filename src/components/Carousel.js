@@ -4,8 +4,7 @@ import './Carousel.css';
 
 const Carousel = ({haustierArray}) => {
   const [active, setActive] = useState(0);
-  // const {id} = useParams();
-  const id = "1"
+  const {id} = useParams();
   const { images } = haustierArray.find(haustier => haustier.id === +id);
   const handleIndexClick = (event) => {
     setActive(+event.target.dataset.index)
